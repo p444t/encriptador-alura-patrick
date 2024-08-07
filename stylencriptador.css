@@ -12,7 +12,7 @@
 
 body {
     background-color: var(--color-primario);
-    width: 90rem;
+    width: 50%;
     height: 64rem;
     top: 38.875rem;
     left: -142.3125rem;
@@ -35,7 +35,7 @@ body {
     font-size: 2rem;
     font-weight: var(--font-weight-letras);
     outline: none;
-    width: 36.0625rem;
+    width: 50%;
     height: 3rem;
     top: 10.5rem;
     left: 15rem;
@@ -54,7 +54,7 @@ body {
     font-family: var(--fuente-inter);
     font-weight: var(--font-weight-letras);
     font-size: 0.75rem;
-    width: 14.3125rem;
+    width: 50%;
     height: 1.125rem;
     top: 53.1875rem;
     left: 15rem;
@@ -165,4 +165,327 @@ body {
 .boton-copiar.visible {
     opacity: 1;
     pointer-events: all;
+}
+/* Media query para tablet */
+@media (max-width: 768px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Para evitar scroll */
+    }
+
+    .contenedor {
+        width: 100%;
+        height: 100%;
+        max-width: 768px; /* Limitar ancho máximo para tablets */
+        max-height: 1174px; /* Limitar altura máxima para tablets */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--color-fondo);
+        box-shadow: 0px 24px 32px -8px #00000014;
+        border-radius: 2rem;
+        overflow: hidden; /* Para evitar scroll interno */
+    }
+
+    .header__logo {
+        width: 3.944rem; /* Convertido desde 31.09px */
+        height: 1.5rem; /* Convertido desde 50.58px */
+        position: var(--position-objetos);
+        top: 2.58875rem; /* Convertido desde 73.42px */
+        left: 0.5rem; /* Convertido desde 40px */
+    }
+
+    .areadetexto {
+        width: 43rem; /* Convertido desde 688px */
+        height: 3rem; /* Convertido desde 48px */
+        top: 6rem; /* Convertido desde 240px */
+        left: 1rem; /* Convertido desde 40px */
+        position: absolute;
+        background-color: var(--color-primario);
+        color: var(--color-text-area);
+        font-family: var(--fuente-inter);
+        font-size: 1rem; /* Ajuste de tamaño de fuente para asegurar que se vea bien en tablets */
+        font-weight: var(--font-weight-letras);
+        outline: none;
+        resize: none;
+    }
+
+    .p__advertencia {
+        position: var(--position-objetos);
+        font-family: var(--fuente-inter);
+        font-weight: var(--font-weight-letras);
+        font-size: 0.6rem;
+        width: 50%;
+        height: 1.125rem;
+        top: 25rem;
+        left: 2rem;
+        opacity: 80%;
+        line-height: 1.125rem;
+    }
+    
+    .p__advertencia::before {
+        content: "!";
+        display: inline-block;
+        width: 0.8rem;
+        height: 0.8rem;
+        text-align: center;
+        border: 2px solid #ccc;
+        background-color: #495057;
+        color: var(--color-white);
+        border-radius: 50%;
+    }
+
+    .botones {
+        position: var(--position-objetos);
+        top: 26.8rem;
+        left: 2rem;
+        gap: 1.5rem;
+        height: 4.1875rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .botones__mod1 {
+        width: 9.5rem;
+        height: 1.1875rem;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        gap: 0.5rem;
+        color: var(--color-white);
+        font-family: var(--fuente-inter);
+        font-size: 0.6rem;
+        background-color: var(--color-text-area);
+        margin-right: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .botones__mod2 {
+        width: 9.5rem;
+        height: 2.1875rem;
+        padding: 1.5rem;
+        border-radius: 1.5rem;
+        gap: 0.5rem;
+        font-size: 0.6rem;
+        color: var(--color-text-area);
+        font-family: var(--fuente-inter);
+        background-color: var(--color-primario);
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .respuesta {
+        position: var(--position-objetos);
+        width: 20rem;
+        height: 6rem;
+        top: 33.5rem;
+        left: 2rem;
+        border-radius: 2rem;
+        background-color: var(--color-white);
+        box-shadow: 0px 24px 32px -8px #00000014;
+    }
+    
+    .mensajebox {
+        position: var(--position-objetos);
+        width: 20rem;
+        height: 6.625rem;
+        top: 34rem;
+        left: 2rem;
+        text-align: center;
+    }
+    
+    .texto__mensaje {
+        font-family: var(--fuente-inter);
+        color: var(--color-box);
+        font-weight: var(--font-weight-letras);
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+    .texto__respuesta {
+        font-family: var(--fuente-inter);
+        color: var(--color-box);
+        font-weight: var(--font-weight-letras);
+        font-size: 0.7rem;
+    }
+    
+    .boton-copiar {
+        width: 14rem;
+        height: 2.1875rem;
+        padding: 1rem;
+        gap: 0.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid;
+        position: absolute;
+        top: 18.8rem;
+        left: 1.875rem;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        background-color: var(--color-white);
+    }
+    
+    .boton-copiar.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .muneco {
+        display: none; /* Ocultar imagen en vista de tablet */
+    }
+
+/* Media query para celular */
+@media (max-width: 375px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden; /* Para evitar scroll */
+    }
+
+    .header__logo {
+        width: 1.875rem; /* Ajustar el tamaño del logo */
+        height: 1.875rem; /* Ajustar el tamaño del logo */
+        position: var(--position-objetos);
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .areadetexto {
+        width: 20.9375rem; /* Ajustar el ancho del textarea */
+        height: 7rem; /* Ajustar el alto del textarea */
+        top: 3rem; /* Ajustar la posición del textarea */
+        left: 1rem; /* Ajustar la posición del textarea */
+        position: absolute;
+        background-color: var(--color-primario);
+        color: var(--color-text-area);
+        font-family: var(--fuente-inter);
+        font-size: 1rem; /* Ajuste de tamaño de fuente para asegurar que se vea bien en celulares */
+        font-weight: var(--font-weight-letras);
+        outline: none;
+        resize: none;
+    }
+
+    .p__advertencia {
+        position: var(--position-objetos);
+        font-family: var(--fuente-inter);
+        font-weight: var(--font-weight-letras);
+        font-size: 0.75rem;
+        width: 100%;
+        height: 1.125rem;
+        top: 10.75rem; /* Ajustar la posición de la advertencia */
+        left: 1rem;
+        opacity: 80%;
+        line-height: 1.125rem;
+    }
+
+    .p__advertencia::before {
+        content: "!";
+        display: inline-block;
+        width: 1rem;
+        height: 1rem;
+        text-align: center;
+        border: 2px solid #ccc;
+        background-color: #495057;
+        color: var(--color-white);
+        border-radius: 50%;
+    }
+
+    .botones {
+        position: var(--position-objetos);
+        top: 12rem; /* Ajustar la posición de los botones */
+        left: 1rem;
+        display: flex; /* Utilizar flexbox para alinear los botones */
+        gap: 1rem; /* Espacio entre los botones */
+        width: calc(100% - 2rem); /* Ajustar el ancho del contenedor de botones */
+    }
+
+    .botones__mod1,
+    .botones__mod2 {
+        flex: 1; /* Hacer que los botones tomen el mismo ancho */
+        height: 3.1875rem; /* Ajustar el alto de los botones */
+        padding: 0.5rem; /* Ajustar el padding de los botones */
+        border-radius: 1.5rem;
+        font-size: 1rem;
+        font-family: var(--fuente-inter);
+        justify-content: center;
+        align-items: center;
+        display: flex; /* Asegurar que el contenido esté centrado */
+    }
+
+    .botones__mod1 {
+        color: var(--color-white);
+        background-color: var(--color-text-area);
+    }
+
+    .botones__mod2 {
+        color: var(--color-text-area);
+        background-color: var(--color-primario);
+    }
+
+    .respuesta {
+        position: var(--position-objetos);
+        width: 90%; /* Ajustar el ancho del contenedor de respuesta */
+        height: auto; /* Ajustar el alto del contenedor de respuesta */
+        top: 18rem; /* Ajustar la posición del contenedor de respuesta */
+        left: 1rem;
+        right: 1rem;
+        border-radius: 1rem;
+        background-color: var(--color-white);
+        box-shadow: 0px 24px 32px -8px #00000014;
+        padding: 1rem; /* Agregar padding al contenedor de respuesta */
+        text-align: center; /* Centrar el texto */
+    }
+
+    .mensajebox {
+        position: static; /* Cambiar la posición a estática */
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        text-align: center;
+    }
+
+    .texto__mensaje {
+        font-family: var(--fuente-inter);
+        color: var(--color-box);
+        font-weight: bold;
+        font-size: 1.25rem; /* Ajustar el tamaño del texto del mensaje */
+        margin-bottom: 0.5rem; /* Ajustar el margen inferior del texto del mensaje */
+    }
+
+    .texto__respuesta {
+        font-family: var(--fuente-inter);
+        color: var(--color-box);
+        font-weight: var(--font-weight-letras);
+        font-size: 1rem; /* Ajustar el tamaño del texto de la respuesta */
+    }
+
+    .boton-copiar {
+        width: 100%; /* Ajustar el ancho del botón de copiar */
+        height: 3.1875rem; /* Ajustar el alto del botón de copiar */
+        padding: 0.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid;
+        margin-top: 1rem; /* Ajustar el margen superior del botón de copiar */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        background-color: var(--color-white);
+    }
+
+    .boton-copiar.visible {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .muneco {
+        display: none; /* Ocultar imagen en vista de celular */
+    }
+}
 }
